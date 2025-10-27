@@ -63,20 +63,21 @@ Below are the complete steps to connect **Termux** to **GitHub** and push code s
 
 ### 🧩 Install Git in Termux
 
-```bash
+```
 pkg update && pkg upgrade
 pkg install git
+```
 
 📂 Configure Git
-
+```
 git config --global user.name "BuiltByAmos-1801"
 git config --global user.email "builtbyiamos@gmail.com"
-
+```
 🔑 Generate SSH Key
-
+```
 ssh-keygen -t rsa -b 4096 -C "builtbyiamos@gmail.com"
 cat ~/.ssh/id_rsa.pub
-
+```
 Copy the generated SSH key and add it to your GitHub → Settings → SSH and GPG keys → New SSH Key.
 
 
@@ -104,18 +105,18 @@ Copy the generated SSH key and add it to your GitHub → Settings → SSH and GP
 ---
 
 🌿 Step 3: Connect Termux to GitHub Repo
-
+```
 git clone https://github.com/BuiltByAmos-1801/BuiltByAmosPortfolio.git
 cd BuiltByAmosPortfolio
-
+```
 If you already have files locally:
-
+```
 git init
 git remote add origin https://github.com/BuiltByAmos-1801/BuiltByAmosPortfolio.git
 git add .
 git commit -m "Initial website deployment"
 git push -u origin main
-
+```
 
 ---
 
@@ -136,9 +137,9 @@ Create one from:
 👉 GitHub → Settings → Developer Settings → Personal Access Tokens → Fine-grained token
 
 Then run:
-
+```
 git remote set-url origin https://<username>:<token>@github.com/<username>/<repo>.git
-
+```
 
 ---
 
@@ -147,7 +148,7 @@ git remote set-url origin https://<username>:<token>@github.com/<username>/<repo
 Create a simple Hello User app in Android Studio using Kotlin.
 
 🧩 MainActivity.kt
-
+```
 package com.example.hellouser
 
 import androidx.appcompat.app.AppCompatActivity
@@ -167,11 +168,11 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-
+```
 ---
 
 🖥️ Step 6: Portfolio Website Folder Structure
-
+```
 BuiltByAmosPortfolio/
 │
 ├── index.html
@@ -187,11 +188,11 @@ BuiltByAmosPortfolio/
 │   └── author.jpeg
 └── README.md
 
-
+```
 ---
 
 🎨 CSS Snippet Example
-
+```
 .img-about img {
   width: 100%;
   height: auto;
@@ -201,7 +202,7 @@ BuiltByAmosPortfolio/
   margin: auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-
+```
 
 ---
 
@@ -222,12 +223,12 @@ Keep README updated with your latest features
 ---
 
 🧩 Example Commands Recap
-
+```
 git status
 git add .
 git commit -m "Updated portfolio design"
 git push origin main
-
+```
 
 ---
 
@@ -241,7 +242,7 @@ git push origin main
 ---
 
 📑 Documentation Structure
-
+```
 📘 Documentation/
 │
 ├── 01-Termux-Setup.md
@@ -251,8 +252,7 @@ git push origin main
 ├── 05-Kotlin-App.md
 ├── 06-Deployment-Guide.md
 └── README.md
-
-
+```
 ---
 
 🧩 License
