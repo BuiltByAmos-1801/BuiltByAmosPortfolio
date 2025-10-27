@@ -125,10 +125,10 @@ git push -u origin main
 ❌ Error 403: Permission Denied
 
 Fix:
-
+```
 git remote remove origin
 git remote add origin https://BuiltByAmos-1801@github.com/BuiltByAmos-1801/BuiltByAmosPortfolio.git
-
+```
 ❌ Error: Authentication Failed
 
 Fix: Use a GitHub Personal Access Token (PAT) instead of a password.
