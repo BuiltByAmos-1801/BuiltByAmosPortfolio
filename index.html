@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amos Anand | Software Engineer</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Fira Code', monospace;
+    }
+
+    .typing::after {
+      content: '|';
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      background: #18181b;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #6366f1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body class="bg-zinc-900 text-zinc-100 transition-colors duration-300" id="body">
+  <!-- Dark/Light Mode Toggle -->
+  
+
+  <!-- Particle.js Background -->
+  <div id="particles-js" class="fixed inset-0 -z-10"></div>
+
+
+  <!-- Navbar -->
+  <nav class="w-full fixed top-0 left-0 z-40 bg-zinc-900/80 backdrop-blur border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <div class="flex items-center gap-2">
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="Amos Anand" class="w-10 h-10 rounded-full border-2 border-blue-500" />
+        <span class="font-bold text-lg text-blue-400">
+          <b>
+            <i>
+              AMOS
+            </i>
+          </b>
+        </span>
+      </div>
+      <ul class="hidden md:flex gap-6 font-medium">
+        <li><a href="#home" class="hover:text-blue-400 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-400 transition">About</a></li>
+        <li><a href="#skills" class="hover:text-blue-400 transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-blue-400 transition">Projects</a></li>
+        <li><a href="#services" class="hover:text-blue-400 transition">Services</a></li>
+        <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden text-2xl text-blue-400 focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col bg-zinc-900 border-t border-zinc-800 px-4 py-2">
+      <a href="#home" class="block py-2 hover:text-blue-400">Home</a>
+      <a href="about.html" class="block py-2 hover:text-blue-400">About</a>
+      <a href="#skills" class="block py-2 hover:text-blue-400">Skills</a>
+      <a href="#projects" class="block py-2 hover:text-blue-400">Projects</a>
+      <a href="#services" class="block py-2 hover:text-blue-400">Services</a>
+
+      <a href="#contact" class="block py-2 hover:text-blue-400">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home"
+    class="pt-32 pb-20 min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 max-w-7xl mx-auto px-4"
+    data-aos="fade-up">
+    <div class="flex-1 flex flex-col items-start gap-6">
+      <h1 class="text-4xl md:text-5xl font-bold text-zinc-100 mb-2">
+        Hi, I'm <span class="text-blue-400">Amos Anand</span>
+      </h1>
+      <h2 class="text-xl md:text-2xl font-medium text-zinc-300 mb-2">
+        Software Engineer | Web Developer | Tech Explorer
+      </h2>
+      <div class="text-lg md:text-xl font-mono text-purple-400 h-8">
+        <span id="typing" class="typing"></span>
+      </div>
+      <div class="flex gap-4 mt-4">
+        <a href="/files/Amos_Anand_Resume.docx" download
+          class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded shadow transition flex items-center gap-2">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+        <a href="#contact"
+          class="bg-zinc-800 hover:bg-zinc-700 text-blue-400 px-5 py-2 rounded shadow transition flex items-center gap-2 border border-blue-500">
+          <i class="fas fa-envelope"></i> Contact Me
+        </a>
+      </div>
+    </div>
+    <div class="flex-1 flex justify-center items-center">
+      <img
+        src="data:image/jpeg;base64,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"
+        alt="Amos Anand" class="w-56 h-56 rounded-full border-4 border-blue-500 shadow-lg object-cover" />
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="py-20 bg-zinc-900" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-6">About Me</h2>
+      <p class="text-lg text-zinc-300 mb-4">
+        I'm Amos, a 21-year-old software engineer from Garhwa, Jharkhand with a passion for building web apps and
+        solving problems using code.
+      </p>
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="flex-1">
+          <h3 class="font-semibold text-zinc-200 mb-2">Tech Stack</h3>
+          <ul class="flex flex-wrap gap-3">
+            <li class="bg-zinc-800 px-3 py-1 rounded text-blue-400">HTML</li>
+            <li class="bg-zinc-800 px-3 py-1 rounded text-blue-400">CSS</li>
+            <li class="bg-zinc-800 px-3 py-1 rounded text-blue-400">JavaScript</li>
+            <li class="bg-zinc-800 px-3 py-1 rounded text-blue-400">React</li>
+            <li class="bg-zinc-800 px-3 py-1 rounded text-purple-400">PHP</li>
+            <li class="bg-zinc-800 px-3 py-1 rounded text-purple-400">Node.js</li>
+            <li class="bg-zinc-800 px-3 py-1 rounded text-purple-400">Python</li>
+            <li class="bg-zinc-800 px-3 py-1 rounded text-green-400">MySQL</li>
+            <li class="bg-zinc-800 px-3 py-1 rounded text-green-400">SQLite</li>
+            <li class="bg-zinc-800 px-3 py-1 rounded text-green-400">MongoDB</li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-semibold text-zinc-200 mb-2">Education</h3>
+          <p class="text-zinc-300">
+            Diploma in Computer Science & Engineering<br>
+            <span class="text-blue-400">Polytechnic College</span>, Year of Passing: <span
+              class="font-semibold">2023</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 bg-zinc-950" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-purple-400 mb-8">Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col items-center">
+          <i class="fas fa-code text-3xl text-blue-400 mb-3"></i>
+          <h3 class="font-semibold text-zinc-200 mb-2">Frontend</h3>
+          <ul class="text-zinc-400">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+          </ul>
+        </div>
+        <div class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col items-center">
+          <i class="fas fa-server text-3xl text-purple-400 mb-3"></i>
+          <h3 class="font-semibold text-zinc-200 mb-2">Backend</h3>
+          <ul class="text-zinc-400">
+            <li>PHP</li>
+            <li>Node.js</li>
+            <li>Python</li>
+          </ul>
+        </div>
+        <div class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col items-center">
+          <i class="fas fa-database text-3xl text-green-400 mb-3"></i>
+          <h3 class="font-semibold text-zinc-200 mb-2">Databases</h3>
+          <ul class="text-zinc-400">
+            <li>MySQL</li>
+            <li>SQLite</li>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+        <div class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col items-center">
+          <i class="fas fa-tools text-3xl text-yellow-400 mb-3"></i>
+          <h3 class="font-semibold text-zinc-200 mb-2">Tools</h3>
+          <ul class="text-zinc-400">
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>VS Code</li>
+            <li>Termux</li>
+            <li>Linux</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-20 bg-zinc-900" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-6">Education</h2>
+      <div class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col md:flex-row items-center gap-6">
+        <i class="fas fa-graduation-cap text-4xl text-purple-400"></i>
+        <div>
+          <h3 class="font-semibold text-zinc-200">Diploma in Computer Science & Engineering</h3>
+          <p class="text-zinc-400">Polytechnic College</p>
+          <p class="text-zinc-400">Year of Passing: <span class="text-blue-400 font-semibold">2023</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-6"></h2>
+      <div class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col md:flex-row items-center gap-6">
+        <i class="fas fa-graduation-cap text-4xl text-purple-400"></i>
+        <div>
+          <h3 class="font-semibold text-zinc-200">B. Tech in Computer Science & Engineering</h3>
+          <p class="text-zinc-400">National Institute of Advanced Manufacturing Technology (NIAMT), Ranchi</p>
+          <p class="text-zinc-400">Year of Passing: <span class="text-blue-400 font-semibold">2026</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 bg-zinc-950" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-purple-400 mb-8">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card 1 -->
+        <div class="bg-zinc-800 rounded-lg shadow-lg p-5 flex flex-col">
+          <img src="images/project_1.PNG" alt="Project 1" class="rounded mb-4">
+          <h3 class="font-semibold text-zinc-200 mb-2">🌐 BuiltByAmos Official Website</h3>
+          <p class="text-zinc-400 mb-2">A modern, responsive portfolio website to showcase my work and skills.</p>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="bg-blue-600 text-white px-2 py-1 rounded text-xs">HTML</span>
+            <span class="bg-purple-600 text-white px-2 py-1 rounded text-xs">CSS</span>
+            <span class="bg-purple-600 text-white px-2 py-1 rounded text-xs">JavaScript</span>
+          </div>
+          <div class="flex gap-2 mt-auto">
+            <a href="https://github.com/DevelopmentWithAmos/BuiltByAmos.git"
+              class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm flex items-center gap-1"><i
+                class="fab fa-github"></i> GitHub</a>
+            <a href="https://builtbyamos.great-site.net/"
+              class="bg-zinc-700 hover:bg-zinc-600 text-blue-400 px-3 py-1 rounded text-sm flex items-center gap-1"><i
+                class="fas fa-external-link-alt"></i> Live</a>
+          </div>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="bg-zinc-800 rounded-lg shadow-lg p-5 flex flex-col">
+          <img src="images/project_2.PNG" alt="Project 2" class="rounded mb-4">
+          <h3 class="font-semibold text-zinc-200 mb-2">🧪 Rapid Cure Pharma – Ayurvedic Healthcare Website</h3>
+          <p class="text-zinc-400 mb-2">A full-stack task manager app with authentication and real-time updates.</p>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="bg-blue-600 text-white px-2 py-1 rounded text-xs">HTML</span>
+            <span class="bg-green-600 text-white px-2 py-1 rounded text-xs">CSS</span>
+            <span class="bg-purple-600 text-white px-2 py-1 rounded text-xs">JavaScript</span>
+          </div>
+          <div class="flex gap-2 mt-auto">
+            <a href="https://github.com/DevelopmentWithAmos/RapidCurePharma.git"
+              class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm flex items-center gap-1"><i
+                class="fab fa-github"></i> GitHub</a>
+            <a href="https://grajjrapidcurepharma.great-site.net/?i=1"
+              class="bg-zinc-700 hover:bg-zinc-600 text-blue-400 px-3 py-1 rounded text-sm flex items-center gap-1"><i
+                class="fas fa-external-link-alt"></i> Live</a>
+          </div>
+        </div>
+        <!-- Project Card 3 -->
+        <div class="bg-zinc-800 rounded-lg shadow-lg p-5 flex flex-col">
+          <img src="https://placehold.co/400x200/0ea5e9/fff?text=Project+3" alt="Project 3" class="rounded mb-4">
+          <h3 class="font-semibold text-zinc-200 mb-2">Blog Platform</h3>
+          <p class="text-zinc-400 mb-2">A simple blog platform with markdown support and tag filtering.</p>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="bg-blue-600 text-white px-2 py-1 rounded text-xs">PHP</span>
+            <span class="bg-green-600 text-white px-2 py-1 rounded text-xs">MySQL</span>
+            <span class="bg-purple-600 text-white px-2 py-1 rounded text-xs">Bootstrap</span>
+          </div>
+          <div class="flex gap-2 mt-auto">
+            <a href="#"
+              class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm flex items-center gap-1"><i
+                class="fab fa-github"></i> GitHub</a>
+            <a href="#"
+              class="bg-zinc-700 hover:bg-zinc-600 text-blue-400 px-3 py-1 rounded text-sm flex items-center gap-1"><i
+                class="fas fa-external-link-alt"></i> Live</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-zinc-900" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8">Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col items-center">
+          <i class="fas fa-laptop-code text-3xl text-blue-400 mb-3"></i>
+          <h3 class="font-semibold text-zinc-200 mb-2">Web Development</h3>
+          <p class="text-zinc-400 text-center">Frontend + Backend web app development tailored to your needs.</p>
+        </div>
+        <div class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col items-center">
+          <i class="fas fa-paint-brush text-3xl text-purple-400 mb-3"></i>
+          <h3 class="font-semibold text-zinc-200 mb-2">App UI/UX Design</h3>
+          <p class="text-zinc-400 text-center">Modern, user-friendly app and website interface design.</p>
+        </div>
+        <div class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col items-center">
+          <i class="fas fa-mobile-alt text-3xl text-blue-400 mb-3"></i>
+          <h3 class="font-semibold text-zinc-200 mb-2">Personal App Creation</h3>
+          <p class="text-zinc-400 text-center">Custom personal apps for productivity, learning, and more.</p>
+        </div>
+        <div class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col items-center">
+          <i class="fas fa-id-card text-3xl text-purple-400 mb-3"></i>
+          <h3 class="font-semibold text-zinc-200 mb-2">Portfolio & Resume Creation</h3>
+          <p class="text-zinc-400 text-center">Standout portfolios and resumes to showcase your skills.</p>
+        </div>
+        <div class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col items-center">
+          <i class="fas fa-briefcase text-3xl text-blue-400 mb-3"></i>
+          <h3 class="font-semibold text-zinc-200 mb-2">Client Website Building</h3>
+          <p class="text-zinc-400 text-center">Professional websites for businesses and individuals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="py-20 bg-zinc-950" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-purple-400 mb-6">Resume</h2>
+      <div class="flex flex-col md:flex-row gap-8 items-center">
+        <a href="files/Amos_Anand_Resume.docx" download
+          class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded shadow flex items-center gap-2 mb-4 md:mb-0">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+        <div class="flex-1">
+          <img src="images/resume.png" alt="Resume Preview"
+            class="w-full max-w-md mx-auto rounded-lg shadow-lg border border-zinc-700" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="py-20 bg-zinc-900" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8">Blog</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-zinc-800 rounded-lg p-6 shadow">
+          <h3 class="font-semibold tsext-zinc-200 mb-2">My Journey in Web Dev</h3>
+          <p class="text-zinc-400 mb-3">How I started coding and my path to becoming a software engineer.</p>
+          <a href="#" class="text-blue-400 hover:underline">Read More</a>
+        </div>
+        <div class="bg-zinc-800 rounded-lg p-6 shadow">
+          <h3 class="font-semibold text-zinc-200 mb-2">5 VS Code Extensions I Love</h3>
+          <p class="text-zinc-400 mb-3">My favorite VS Code extensions that boost my productivity.</p>
+          <a href="#" class="text-blue-400 hover:underline">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="stats" class="py-20 bg-zinc-950" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-purple-400 mb-8">Stats</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold text-blue-400" id="projects-count">0</div>
+          <div class="text-zinc-300 mt-2">Projects Done</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-blue-400" id="clients-count">0</div>
+          <div class="text-zinc-300 mt-2">Clients</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-blue-400" id="hours-count">0</div>
+          <div class="text-zinc-300 mt-2">Coding Hours</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-blue-400" id="certs-count">0</div>
+          <div class="text-zinc-300 mt-2">Certificates</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline / Journey -->
+  <section id="timeline" class="py-20 bg-zinc-900" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8">My Journey</h2>
+      <ol class="relative border-l-4 border-blue-400">
+        <li class="mb-10 ml-6">
+          <span
+            class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-blue-400 rounded-full ring-8 ring-zinc-900">
+            <i class="fas fa-graduation-cap text-white"></i>
+          </span>
+          <h3 class="font-semibold text-zinc-200">Education</h3>
+          <p class="text-zinc-400">Polytechnic in Computer Science & Engineering</p>
+          <span class="text-xs text-zinc-500">2021-2024</span>
+        </li>
+        <li class="mb-10 ml-6">
+          <span
+            class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-purple-400 rounded-full ring-8 ring-zinc-900">
+            <i class="fas fa-code text-white"></i>
+          </span>
+          <h3 class="font-semibold text-zinc-200">First Project</h3>
+          <p class="text-zinc-400">Built my first web app using HTML, CSS, and JS.</p>
+          <span class="text-xs text-zinc-500">2021</span>
+        </li>
+        <li class="mb-10 ml-6">
+          <span
+            class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-blue-400 rounded-full ring-8 ring-zinc-900">
+            <i class="fas fa-user-tie text-white"></i>
+          </span>
+          <h3 class="font-semibold text-zinc-200">First Freelance Client</h3>
+          <p class="text-zinc-400">Delivered a portfolio website for a local business.</p>
+          <span class="text-xs text-zinc-500">2022</span>
+        </li>
+        <li class="mb-10 ml-6">
+          <span
+            class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-purple-400 rounded-full ring-8 ring-zinc-900">
+            <i class="fas fa-tools text-white"></i>
+          </span>
+          <h3 class="font-semibold text-zinc-200">Toolmastery</h3>
+          <p class="text-zinc-400">Mastered VS Code, GitHub, Termux, and more.</p>
+          <span class="text-xs text-zinc-500">2023</span>
+        </li>
+        <li class="ml-6">
+          <span
+            class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-blue-400 rounded-full ring-8 ring-zinc-900">
+            <i class="fas fa-briefcase text-white"></i>
+          </span>
+          <h3 class="font-semibold text-zinc-200">Current Work</h3>
+          <p class="text-zinc-400">Building modern web apps and helping clients grow online.</p>
+          <span class="text-xs text-zinc-500">2024</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Tools I Use -->
+  <section id="tools" class="py-20 bg-zinc-950" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-purple-400 mb-6">Tools I Use</h2>
+      <div class="flex flex-wrap gap-4">
+        <div class="bg-zinc-800 px-4 py-2 rounded flex items-center gap-2 text-blue-400"><i class="fas fa-code"></i> VS
+          Code</div>
+        <div class="bg-zinc-800 px-4 py-2 rounded flex items-center gap-2 text-purple-400"><i class="fab fa-github"></i>
+          GitHub</div>
+        <div class="bg-zinc-800 px-4 py-2 rounded flex items-center gap-2 text-blue-400"><i class="fas fa-pen-nib"></i>
+          Figma</div>
+        <div class="bg-zinc-800 px-4 py-2 rounded flex items-center gap-2 text-green-400"><i
+            class="fas fa-terminal"></i> Termux</div>
+        <div class="bg-zinc-800 px-4 py-2 rounded flex items-center gap-2 text-yellow-400"><i
+            class="fas fa-paint-brush"></i> Canva</div>
+        <div class="bg-zinc-800 px-4 py-2 rounded flex items-center gap-2 text-pink-400"><i class="fas fa-magic"></i>
+          CleanUp.pictures</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-zinc-900" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-6">Contact Me</h2>
+      <form class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col gap-4" id="contact-form">
+        <div class="flex flex-col md:flex-row gap-4">
+          <input type="text" name="name" placeholder="Your Name" required
+            class="flex-1 px-4 py-2 rounded bg-zinc-900 text-zinc-100 border border-zinc-700 focus:border-blue-400 outline-none" />
+          <input type="email" name="email" placeholder="Your Email" required
+            class="flex-1 px-4 py-2 rounded bg-zinc-900 text-zinc-100 border border-zinc-700 focus:border-blue-400 outline-none" />
+        </div>
+        <textarea name="message" placeholder="Your Message" required
+          class="px-4 py-2 rounded bg-zinc-900 text-zinc-100 border border-zinc-700 focus:border-blue-400 outline-none"></textarea>
+        <button type="submit"
+          class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded shadow flex items-center gap-2 w-fit">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+      <div class="flex gap-4 mt-8">
+        <a href="https://github.com/amosanand1801" target="_blank" class="text-2xl text-zinc-400 hover:text-blue-400"><i
+            class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/amosanand03" target="_blank"
+          class="text-2xl text-zinc-400 hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com/amosanand03" target="_blank"
+          class="text-2xl text-zinc-400 hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@amosanand03" target="_blank" class="text-2xl text-zinc-400 hover:text-red-400"><i
+            class="fab fa-youtube"></i></a>
+        <a href="https://twitter.com/amosanand03" target="_blank" class="text-2xl text-zinc-400 hover:text-blue-400"><i
+            class="fab fa-twitter"></i></a>
+        <a href="https://wa.me/918757603560" target="_blank"
+          class="text-2xl text-green-400 hover:text-green-500 ml-4"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-20 bg-zinc-950" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-purple-400 mb-8">Testimonials</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col">
+          <div class="flex items-center gap-3 mb-2">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" alt="Client 1">
+            <div>
+              <div class="font-semibold text-zinc-200">Rahul Kumar</div>
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-zinc-400">"Amos delivered my website on time and exceeded my expectations. Highly recommended!"
+          </p>
+        </div>
+        <div class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col">
+          <div class="flex items-center gap-3 mb-2">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full" alt="Client 2">
+            <div>
+              <div class="font-semibold text-zinc-200">Priya Singh</div>
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-zinc-400">"Great communication and top-notch skills. Will work with Amos again!"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 bg-zinc-900" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8">FAQ</h2>
+      <div class="space-y-4">
+        <details class="bg-zinc-800 rounded-lg p-4 shadow">
+          <summary class="font-semibold text-zinc-200 cursor-pointer">How to hire me?</summary>
+          <p class="text-zinc-400 mt-2">You can contact me via the form above or reach out on LinkedIn, GitHub, or
+            WhatsApp.</p>
+        </details>
+        <details class="bg-zinc-800 rounded-lg p-4 shadow">
+          <summary class="font-semibold text-zinc-200 cursor-pointer">Pricing model?</summary>
+          <p class="text-zinc-400 mt-2">I offer flexible pricing based on project scope and requirements. Let's discuss
+            your needs!</p>
+        </details>
+        <details class="bg-zinc-800 rounded-lg p-4 shadow">
+          <summary class="font-semibold text-zinc-200 cursor-pointer">How long does a website take?</summary>
+          <p class="text-zinc-400 mt-2">Most websites are delivered within 1-3 weeks, depending on complexity and
+            features.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Login/Register Panel (Optional) -->
+  <section id="login" class="py-20 bg-zinc-950" data-aos="fade-up">
+    <div class="max-w-md mx-auto px-4">
+      <h2 class="text-3xl font-bold text-purple-400 mb-6">Client Login</h2>
+      <form class="bg-zinc-800 rounded-lg p-6 shadow flex flex-col gap-4">
+        <input type="email" placeholder="Email"
+          class="px-4 py-2 rounded bg-zinc-900 text-zinc-100 border border-zinc-700 focus:border-blue-400 outline-none" />
+        <input type="password" placeholder="Password"
+          class="px-4 py-2 rounded bg-zinc-900 text-zinc-100 border border-zinc-700 focus:border-blue-400 outline-none" />
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded shadow">Login</button>
+        <a href="#" class="text-blue-400 hover:underline text-sm mt-2">Register</a>
+      </form>
+    </div>
+  </section>
+
+  <!-- Newsletter Subscription -->
+  <section id="newsletter" class="py-20 bg-zinc-900" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-blue-400 mb-4">Subscribe to My Newsletter</h2>
+      <p class="text-zinc-300 mb-6">Get updates on new projects, blog posts, and more!</p>
+      <form class="flex flex-col md:flex-row gap-4 justify-center items-center" id="newsletter-form">
+        <input type="email" placeholder="Your Email" required
+          class="px-4 py-2 rounded bg-zinc-800 text-zinc-100 border border-zinc-700 focus:border-blue-400 outline-none" />
+        <button type="submit"
+          class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded shadow">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-950 py-8 border-t border-zinc-800">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-zinc-400 text-sm">&copy; 2025 Amos Anand. <span class="text-blue-400">BuiltByAmos</span></div>
+      <div class="flex gap-4">
+        <a href="https://github.com/amosanand03" target="_blank" class="text-zinc-400 hover:text-blue-400"><i
+            class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/amosanand03" target="_blank" class="text-zinc-400 hover:text-blue-400"><i
+            class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com/amosanand03" target="_blank" class="text-zinc-400 hover:text-pink-400"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@amosanand03" target="_blank" class="text-zinc-400 hover:text-red-400"><i
+            class="fab fa-youtube"></i></a>
+        <a href="https://twitter.com/amosanand03" target="_blank" class="text-zinc-400 hover:text-blue-400"><i
+            class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tawk.to Live Chat Widget (Optional) -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/65e0e2e19a809f19fb3b1b1a/1hnhqv1k2';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+
+  <!-- Particle.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#6366f1" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.2, "random": true },
+        "size": { "value": 3, "random": true },
+        "line_linked": { "enable": true, "distance": 150, "color": "#6366f1", "opacity": 0.1, "width": 1 },
+        "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "repulse": { "distance": 100, "duration": 0.4 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  </script>
+
+  <!-- Typing Animation -->
+  <script>
+    const typingTexts = [
+      "Turning Ideas Into Code",
+      "Let's Build The Future"
+    ];
+    let typingIndex = 0, charIndex = 0, isDeleting = false;
+    const typingElement = document.getElementById('typing');
+    function type() {
+      const current = typingTexts[typingIndex];
+      if (isDeleting) {
+        typingElement.textContent = current.substring(0, charIndex--);
+        if (charIndex < 0) {
+          isDeleting = false;
+          typingIndex = (typingIndex + 1) % typingTexts.length;
+          setTimeout(type, 500);
+        } else {
+          setTimeout(type, 40);
+        }
+      } else {
+        typingElement.textContent = current.substring(0, charIndex++);
+        if (charIndex > current.length) {
+          isDeleting = true;
+          setTimeout(type, 1200);
+        } else {
+          setTimeout(type, 80);
+        }
+      }
+    }
+    if (typingElement) type();
+  </script>
+
+  <!-- Animated Counters -->
+  <script>
+    function animateCounter(id, end, duration) {
+      let start = 0;
+      const step = Math.ceil(end / (duration / 20));
+      const el = document.getElementById(id);
+      function update() {
+        start += step;
+        if (start >= end) {
+          el.textContent = end + (id === 'projects-count' ? '+' : (id === 'clients-count' ? '+' : (id === 'hours-count' ? '+' : (id === 'certs-count' ? '+' : ''))));
+        } else {
+          el.textContent = start;
+          setTimeout(update, 20);
+        }
+      }
+      update();
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      animateCounter('projects-count', 20, 1000);
+      animateCounter('clients-count', 10, 1000);
+      animateCounter('hours-count', 1200, 1000);
+      animateCounter('certs-count', 8, 1000);
+    });
+  </script>
+
+  <!-- Dark/Light Mode Toggle -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.getElementById('body');
+    function setTheme(dark) {
+      if (dark) {
+        body.classList.remove('bg-white', 'text-zinc-900');
+        body.classList.add('bg-zinc-900', 'text-zinc-100');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      } else {
+        body.classList.remove('bg-zinc-900', 'text-zinc-100');
+        body.classList.add('bg-white', 'text-zinc-900');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      }
+    }
+    // Load theme from localStorage
+    let darkMode = localStorage.getItem('darkMode') !== 'false';
+    setTheme(darkMode);
+    themeToggle.addEventListener('click', () => {
+      darkMode = !darkMode;
+      setTheme(darkMode);
+      localStorage.setItem('darkMode', darkMode);
+    });
+  </script>
+
+  <!-- Mobile Menu Toggle -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+
+  <!-- Dummy Form Handlers -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thank you for reaching out! I will get back to you soon.');
+      this.reset();
+    });
+    document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Subscribed! You will receive updates soon.');
+      this.reset();
+    });
+  </script>
+</body>
+
+</html>

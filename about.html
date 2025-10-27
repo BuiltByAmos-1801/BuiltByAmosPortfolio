@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amos Anand | Software Engineer - About</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+</style>
+
+<body>
+  <!-- Google Fonts: Inter -->
+  <!-- Navbar (copied and adapted from index.html) -->
+  <nav class="bg-zinc-950 shadow-lg fixed w-full top-0 left-0 z-40">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo/Brand -->
+        <a href="index.html" class="flex items-center gap-2">
+          <span class="text-2xl text-blue-400 font-bold">
+            <b>
+              <i>
+                AMOS
+              </i>
+            </b>
+          </span>
+        </a>
+        <!-- Navigation Links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html#home" class="text-zinc-200 hover:text-blue-400 font-medium transition">Home</a>
+          <a href="index.html#skills" class="text-zinc-200 hover:text-blue-400 font-medium transition">Skills</a>
+          <a href="index.html#education" class="text-zinc-200 hover:text-blue-400 font-medium transition">Education</a>
+          <a href="index.html#projects" class="text-zinc-200 hover:text-blue-400 font-medium transition">Projects</a>
+          <a href="about.html" class="text-blue-400 font-semibold transition">About</a>
+          <a href="contact.html" class="text-zinc-200 hover:text-blue-400 font-medium transition">Contact</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-zinc-200 hover:text-blue-400 focus:outline-none text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-zinc-950 px-4 pb-4">
+      <li><a href="#home" class="hover:text-blue-400 transition">Home</a></li>
+      <li><a href="about.html" class="hover:text-blue-400 transition">About</a></li>
+      <li><a href="#skills" class="hover:text-blue-400 transition">Skills</a></li>
+      <li><a href="#projects" class="hover:text-blue-400 transition">Projects</a></li>
+      <li><a href="#services" class="hover:text-blue-400 transition">Services</a></li>
+      <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
+    </div>
+  </nav>
+
+  <br>
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Optional: Close menu on link click (for better UX)
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+
+
+  <div class="min-h-screen bg-zinc-900 text-zinc-100 px-4 py-10 md:py-16">
+    <div class="max-w-3xl mx-auto space-y-12">
+
+      <!-- Section 1: Introduction -->
+      <section class="bg-zinc-800 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+        <div class="text-4xl mb-2">🧑‍💻</div>
+        <h1 class="text-2xl md:text-3xl font-bold text-blue-400 mb-2">Hi, I'm Amos Anand</h1>
+        <p class="text-zinc-300 text-lg">
+          A passionate Web Developer focused on building clean, scalable, and user-friendly digital experiences.<br>
+          I specialize in full-stack development using <span class="font-semibold text-blue-300">HTML</span>, <span
+            class="font-semibold text-blue-300">CSS</span>, <span class="font-semibold text-blue-300">JavaScript</span>,
+          <span class="font-semibold text-blue-300">PHP</span>, and <span
+            class="font-semibold text-blue-300">React</span>.
+        </p>
+      </section>
+
+      <!-- Section 2: Technical Skills -->
+      <section class="bg-zinc-800 rounded-2xl shadow-lg p-8">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🧠</span>
+          <h2 class="text-xl font-bold text-purple-400">Technical Skills</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Programming Languages -->
+          <div>
+            <h3 class="font-semibold text-zinc-200 mb-2 flex items-center gap-2">
+              <i class="fas fa-code text-blue-400"></i> Programming Languages
+            </h3>
+            <ul class="flex flex-wrap gap-2">
+              <li
+                class="bg-blue-600/80 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1 shadow hover:bg-blue-700 transition">
+                <i class="fab fa-js-square"></i> JavaScript
+              </li>
+              <li
+                class="bg-yellow-500/80 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1 shadow hover:bg-yellow-600 transition">
+                <i class="fab fa-python"></i> Python
+              </li>
+              <li
+                class="bg-indigo-600/80 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1 shadow hover:bg-indigo-700 transition">
+                <i class="fab fa-php"></i> PHP
+              </li>
+            </ul>
+          </div>
+          <!-- Frameworks & Libraries -->
+          <div>
+            <h3 class="font-semibold text-zinc-200 mb-2 flex items-center gap-2">
+              <i class="fas fa-layer-group text-green-400"></i> Frameworks & Libraries
+            </h3>
+            <ul class="flex flex-wrap gap-2">
+              <li
+                class="bg-cyan-600/80 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1 shadow hover:bg-cyan-700 transition">
+                <i class="fab fa-react"></i> React
+              </li>
+              <li
+                class="bg-lime-600/80 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1 shadow hover:bg-lime-700 transition">
+                <i class="fab fa-node-js"></i> Node.js
+              </li>
+              <li
+                class="bg-red-600/80 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1 shadow hover:bg-red-700 transition">
+                <i class="fab fa-laravel"></i> Laravel
+              </li>
+            </ul>
+          </div>
+          <!-- Tools & Platforms -->
+          <div>
+            <h3 class="font-semibold text-zinc-200 mb-2 flex items-center gap-2">
+              <i class="fas fa-tools text-orange-400"></i> Tools & Platforms
+            </h3>
+            <ul class="flex flex-wrap gap-2">
+              <li
+                class="bg-gray-700/80 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1 shadow hover:bg-gray-800 transition">
+                <i class="fab fa-git-alt"></i> Git
+              </li>
+              <li
+                class="bg-blue-500/80 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1 shadow hover:bg-blue-600 transition">
+                <i class="fab fa-docker"></i> Docker
+              </li>
+              <li
+                class="bg-gray-800/80 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1 shadow hover:bg-gray-900 transition">
+                <i class="fab fa-linux"></i> Linux
+              </li>
+              <li
+                class="bg-yellow-400/80 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1 shadow hover:bg-yellow-500 transition">
+                <i class="fas fa-fire"></i> Firebase
+              </li>
+            </ul>
+          </div>
+          <!-- Databases -->
+          <div>
+            <h3 class="font-semibold text-zinc-200 mb-2 flex items-center gap-2">
+              <i class="fas fa-database text-pink-400"></i> Databases
+            </h3>
+            <ul class="flex flex-wrap gap-2">
+              <li
+                class="bg-emerald-600/80 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1 shadow hover:bg-emerald-700 transition">
+                <i class="fas fa-database"></i> MySQL
+              </li>
+              <li
+                class="bg-slate-600/80 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1 shadow hover:bg-slate-700 transition">
+                <i class="fas fa-database"></i> SQLite
+              </li>
+              <li
+                class="bg-green-700/80 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1 shadow hover:bg-green-800 transition">
+                <i class="fas fa-leaf"></i> MongoDB
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Education -->
+      <section class="bg-zinc-800 rounded-2xl shadow-lg p-8">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🎓</span>
+          <h2 class="text-xl font-bold text-blue-400">Education</h2>
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <div class="flex-shrink-0">
+            <div class="bg-blue-500 text-white rounded-full w-14 h-14 flex items-center justify-center text-3xl shadow">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold text-zinc-200 text-lg">B.Tech in Computer Science & Engineering</h3>
+            <p class="text-zinc-400">2023-2026</p>
+            <p class="text-zinc-400">National Institute of Advanced Manufacturing Technology (NIAMT), Ranchi</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Experience -->
+      <section class="bg-zinc-800 rounded-2xl shadow-lg p-8">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">💼</span>
+          <h2 class="text-xl font-bold text-purple-400">Experience</h2>
+        </div>
+        <div class="flex flex-col md:flex-row items-start gap-6">
+          <div class="flex-shrink-0">
+            <div
+              class="bg-purple-500 text-white rounded-full w-14 h-14 flex items-center justify-center text-3xl shadow">
+              <i class="fas fa-briefcase"></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold text-zinc-200 text-lg">Freelance Web Developer</h3>
+            <p class="text-zinc-400">2023 to Present</p>
+            <ul class="list-disc list-inside text-zinc-300 mt-2 space-y-1">
+              <li>Worked with local businesses to create responsive websites and web apps using <span
+                  class="font-semibold text-blue-300">PHP</span>, <span
+                  class="font-semibold text-blue-300">Tailwind</span> and <span
+                  class="font-semibold text-blue-300">React</span>.</li>
+              <li>Delivered <span class="font-semibold text-blue-300">50+</span> successful projects.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Project Highlights -->
+      <section class="bg-zinc-800 rounded-2xl shadow-lg p-8">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🚀</span>
+          <h2 class="text-xl font-bold text-blue-400">Project Highlights</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Project 1 -->
+          <div class="bg-zinc-900 rounded-xl p-5 shadow hover:shadow-xl transition">
+            <h3 class="font-semibold text-zinc-200 text-lg mb-1">🌐 BuiltByAmos Official Website</h3>
+            <p class="text-zinc-400 mb-2">"BuiltByAmos – Professional Web Development Services by Amos Anand.<span
+                class="text-blue-400">(HTML and CSS)</span></p>
+            <div class="flex gap-3">
+              <a href="https://github.com/DevelopmentWithAmos/BuiltByAmos.git" target="_blank"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded shadow flex items-center gap-1 text-sm transition">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://builtbyamos.great-site.net/" target="_blank"
+                class="bg-zinc-700 hover:bg-zinc-600 text-blue-400 px-3 py-1 rounded shadow flex items-center gap-1 text-sm transition">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="bg-zinc-900 rounded-xl p-5 shadow hover:shadow-xl transition">
+            <h3 class="font-semibold text-zinc-200 text-lg mb-1">College Portal System</h3>
+            <p class="text-zinc-400 mb-2">A complete web app to manage students, attendance, and marks using <span
+                class="text-blue-400">PHP</span> and <span class="text-blue-400">SQLite</span>.</p>
+            <div class="flex gap-3">
+              <a href="#"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded shadow flex items-center gap-1 text-sm transition">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#"
+                class="bg-zinc-700 hover:bg-zinc-600 text-blue-400 px-3 py-1 rounded shadow flex items-center gap-1 text-sm transition">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Certifications & Achievements -->
+      <section class="bg-zinc-800 rounded-2xl shadow-lg p-8">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🏆</span>
+          <h2 class="text-xl font-bold text-purple-400">Certifications & Achievements</h2>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3">
+            <i class="fas fa-certificate text-yellow-400"></i>
+            <span>Web Development Bootcamp – <span class="text-blue-300">Udemy</span></span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fas fa-trophy text-orange-400"></i>
+            <span>Hackathon Finalist – <span class="text-blue-300">CodeSprint 2023</span></span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fas fa-star text-pink-400"></i>
+            <span>Top 5% Rank in <span class="text-blue-300">LeetCode Challenge</span></span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 7: Passion & Mission -->
+      <section class="bg-zinc-800 rounded-2xl shadow-lg p-8">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🎯</span>
+          <h2 class="text-xl font-bold text-blue-400">Passion & Mission</h2>
+        </div>
+        <blockquote class="border-l-4 border-blue-500 pl-4 italic text-zinc-300">
+          "I enjoy solving real-world problems through technology. My goal is to develop software that improves people's
+          lives and boosts business performance."
+        </blockquote>
+      </section>
+
+      <!-- Section 8: Personal Touch -->
+      <section class="bg-zinc-800 rounded-2xl shadow-lg p-8">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">😊</span>
+          <h2 class="text-xl font-bold text-purple-400">Personal Touch</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-zinc-200 mb-2 flex items-center gap-2">
+              <i class="fas fa-gamepad text-blue-400"></i> Hobbies
+            </h3>
+            <ul class="list-disc list-inside text-zinc-300 space-y-1">
+              <li>Reading tech blogs</li>
+              <li>Gaming</li>
+              <li>Blogging</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-zinc-200 mb-2 flex items-center gap-2">
+              <i class="fas fa-user-astronaut text-green-400"></i> Traits
+            </h3>
+            <ul class="list-disc list-inside text-zinc-300 space-y-1">
+              <li>Fast learner</li>
+              <li>Curious</li>
+              <li>Team player</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9: Call to Action -->
+      <section class="bg-zinc-800 rounded-2xl shadow-lg p-8 text-center">
+        <div class="flex items-center justify-center gap-2 mb-4">
+          <span class="text-2xl">📬</span>
+          <h2 class="text-xl font-bold text-blue-400">Let's Connect!</h2>
+        </div>
+        <p class="text-zinc-300 mb-6">Interested in working together or want to know more? Reach out to me!</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="https://github.com/DevelopmentWithAmos" target="_blank"
+            class="bg-zinc-900 hover:bg-zinc-700 text-white px-5 py-2 rounded-full shadow flex items-center gap-2 transition font-semibold">
+            <i class="fab fa-github text-xl"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/amos-anand" target="_blank"
+            class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full shadow flex items-center gap-2 transition font-semibold">
+            <i class="fab fa-linkedin text-xl"></i> LinkedIn
+          </a>
+          <a href="resume.pdf" download
+            class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-full shadow flex items-center gap-2 transition font-semibold">
+            <i class="fas fa-file-download text-xl"></i> Resume
+          </a>
+          <a href="contact.html"
+            class="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-full shadow flex items-center gap-2 transition font-semibold">
+            <i class="fas fa-envelope text-xl"></i> Contact Me
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <footer class="bg-zinc-950 py-8 border-t border-zinc-800">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-zinc-400 text-sm">&copy; 2025 Amos Anand. <a class="text-blue-400"
+          href="https://builtbyamos.great-site.net/">BuiltByAmos</a></div>
+      <div class="flex gap-4">
+        <a href="https://github.com/amosanand03" target="_blank" class="text-zinc-400 hover:text-blue-400"><i
+            class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/amosanand03" target="_blank" class="text-zinc-400 hover:text-blue-400"><i
+            class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com/amosanand03" target="_blank" class="text-zinc-400 hover:text-pink-400"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@amosanand03" target="_blank" class="text-zinc-400 hover:text-red-400"><i
+            class="fab fa-youtube"></i></a>
+        <a href="https://twitter.com/amosanand03" target="_blank" class="text-zinc-400 hover:text-blue-400"><i
+            class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+</body>
+
+</html>
